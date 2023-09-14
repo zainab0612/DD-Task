@@ -17,22 +17,25 @@ html,body {
     justify-content: center;
     align-items: center;
     padding: 20px;
+    
 }
 .content {
     height: 100%;
-    max-width: 500px;
+    width: 500px;
     display: flex;
     flex-direction: column;
+    border: 2px solid black;
 }
+
 .content-preview {
     height: 350px;
-    width: 500px;
+    width: 496px;
     background: url(./istockphoto-1157789866-170667a.webp);
     background-size:auto;
     background-position:center;
     background-position-y: bottom;
     background-repeat: no-repeat;
-   flex: 1;
+    flex: 1;
 }
 .content-info {
     flex: 1.19;
@@ -42,17 +45,23 @@ html,body {
     padding-top: 25px;
     position: relative;
     text-align: justify;
+    border-radius: 10px;
 }
 
 .content-info h1 {
     font-size: 25px;
-    line-height: 1.5;
+    line-height: 1.0;
     margin-bottom: 15px;
 }
 
 .content-info p {
     font-size: 14px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    padding-right: 8px;
+}
+.content-info ul {
+    font-size: 14px;
+    margin-bottom: 20px;
     padding-right: 8px;
 }
 .content-info button {
@@ -90,24 +99,98 @@ html,body {
         background: linear-gradient(to right, transparent 1%, rgba(71, 77, 74, 0.1) 40%,rgba(48, 52, 50, 0.1) 60% , transparent 100%);
       }
       
-      button:hover:before {
-        transform: translateX(15em);
-      }
     .content-info i {
         margin-right: 5px;
     }
+    .container-fluid {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width:100%;
+    }
+    .login-box {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 350px;
+        height: 330px;
+    }
+    .logo {
+        max-width:250px;
+    }
+    
+    .input-box {
+        margin-bottom: 10px;
+    }
+
+    input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    }
+    .btn-login {
+        background-color: #1877f2;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 16px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 100%;
+
+    }
+    .btn-login:hover {
+        background-color: #145996;
+        color: #fff;
+    }
+    
+    .btn-create-account {
+        background-color: #42b72a;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 16px;
+        margin-top: 10px;
+    }
+    .btn-create-account:hover {
+        background-color: #3a9c23;
+        color: #fff;
+    }
+    
+    .forgot-password a {
+        text-decoration: none;
+        color: #1877f2;
+        margin-top: 20px;
+    }
+    
+    hr {
+        margin: 10px 0;
+    }
+
 
 
 
 @media screen and (max-width: 767px) {
     .content {
-        height: 600px;
+        height: 650px;
         max-width: 100%;
         display: flex;
         flex-direction: column;
     }
     .content-preview {
         width: 100%;
+        height: 300px;
         border-bottom-left-radius: 0px;
         border-top-right-radius: 10px;
     }
@@ -119,4 +202,13 @@ html,body {
         font-size: 18px;
         
     }
+    .content-info button {
+        width: 100%;
+        display: flex;
+        /* flex-direction: column; */
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 15px;
+    }
+
 }
